@@ -11,7 +11,7 @@ class MainBuilder {
     
     static func create(selectCity: SearchModel? = nil) -> MainController {
         let controller = MainController()
-        let repository = MainRepository()
+        let repository = MainRepositoryImpl()
         
         let presenter = MainPresenter(delegate: controller, repository: repository)
         

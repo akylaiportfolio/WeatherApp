@@ -7,7 +7,11 @@
 
 import Foundation
 
-class SplashRepository {
+protocol SplashRepository {
+    func isEmptyCities() -> Bool
+}
+
+class SplashRepositoryImpl: SplashRepository {
     
     private let dataBase = DataBase.shered
     

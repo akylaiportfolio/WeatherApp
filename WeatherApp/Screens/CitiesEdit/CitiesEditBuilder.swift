@@ -11,7 +11,7 @@ class CitiesEditBuilder {
     
     static func create() -> CitiesEditController {
         let controller = CitiesEditController()
-        let repository = CitiesEditRepository()
+        let repository = CitiesEditRepositoryImpl()
         
         let presenter = CitiesEditPresenter(delegate: controller, repository: repository)
         

@@ -11,7 +11,7 @@ class SplashBuilder {
     
     static func create() -> SplashController {
         let controller = SplashController()
-        let repository = SplashRepository()
+        let repository = SplashRepositoryImpl()
         
         let presenter = SplashPresenter(delegate: controller, repository: repository)
         

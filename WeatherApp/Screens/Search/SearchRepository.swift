@@ -7,7 +7,17 @@
 
 import Foundation
 
-class SearchRepository {
+protocol SearchRepository {
+    func search(name: String, result: @escaping (Result<[SearchModel], DecoderError>) -> Void)
+    
+    func save(_ model: SearchModel)
+    
+    func getSave() -> [SearchModel]
+    
+    func getPopular() -> [SearchModel]
+}
+
+class SearchRepositoryImpl: SearchRepository {
    
     private let api = ApiClient.shered
     

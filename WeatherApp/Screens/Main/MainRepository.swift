@@ -7,7 +7,11 @@
 
 import Foundation
 
-class MainRepository {
+protocol MainRepository {
+    func getSave() -> [SearchModel]
+}
+
+class MainRepositoryImpl: MainRepository {
     
     private let dataBase = DataBase.shered
     

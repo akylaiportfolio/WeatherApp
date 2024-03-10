@@ -7,7 +7,13 @@
 
 import Foundation
 
-class CitiesEditRepository {
+protocol CitiesEditRepository {
+    func getSave() -> [SearchModel]
+    
+    func removeCity(_ model: SearchModel)
+}
+
+class CitiesEditRepositoryImpl: CitiesEditRepository {
     
     private let dataBase = DataBase.shered
     
