@@ -35,6 +35,10 @@ An application for displaying weather forecasts for cities and searching for the
 
 To obtain weather forecast data and search for cities, the free [openweathermap](https://openweathermap.org/api) API was used.
 
+### Tests
+
+- Wrote unit tests for all presentations
+
 ### Authors
 
 - [Telegram](https://t.me/akylai_sun)
